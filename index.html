@@ -1,98 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Estufa TCC</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecionando...</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(#39d819, #37d3e7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden; /* Para esconder o overflow do body */
+    }
+    .loader {
+        position: relative;
+        text-align: center;
+        background-color: #ffffffde;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        animation: fade-in 0.6s ease-out;
+        overflow: hidden; /* Para esconder o overflow do loader */
+    }
+    @keyframes fade-in {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .loader .spinner {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 8px solid rgba(255, 255, 255, 0.3); /* Cor do anel de carregamento */
+        border-top-color: #3498db; /* Cor do anel de carregamento na parte superior */
+        animation: spin 1s linear infinite;
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+    .loader p {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #666;
+    }
+    /* Animação de fundo */
+    .background-animation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Coloca a animação atrás do conteúdo */
+        background: linear-gradient(45deg, #1c92d2, #f2fcfe, #e2e2e2, #f8f8f8); /* Cores da animação */
+        background-size: 400% 400%; /* Tamanho do gradiente */
+        animation: gradient-animation 15s ease infinite; /* Animação do gradiente */
+    }
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+</style>
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <img src="img/planta-logo.png" alt="Logotipo" class="logo">
-            <h1>Mini Estufa Automatizada</h1>
-            <nav>
-                <ul>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="index.html">Início</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="loader">
+        <div class="background-animation"></div>
+        <div class="spinner"></div>
+        <p>Aguarde, você será redirecionado para o futuro...</p>
+    </div>
 
-    <section class="section">
-        <div class="container">
-            <div class="section-content">
-                <div class="section-text">
-                    <h2>Mini Estufa Automatizada</h2>
-                    <p>O projeto da Mini Estufa visa entregar ao público uma maneira fácil e prática de cultivar plantas ou até mesmo pequenas frutas ocupando um pequeno espaço.</p>
-                    <p>Cultive seu próprio paraíso: Mini Estufas que fazem sua natureza florescer!</p>
-                </div>
-                <div class="section-image">
-                    <img src="img/data-8595837_1280.jpg" alt="Imagem da Seção">
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <main>
-        <div class="container">
-
-            <section class="content">
-                <h2>Conteúdo</h2>
-                <div class="gallery">
-                    <div class="card">
-                        <img src="img/data-8595837_1280.jpg" alt="Imagem 1">
-                        <div class="card-info">
-                            <h3>Teste</h3>
-                            <p>Descrição do Card 1.</p>
-                            <a href="#" class="button">Saber Mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="img/data-8595837_1280.jpg" alt="Imagem 1">
-                        <div class="card-info">
-                            <h3>Teste</h3>
-                            <p>Descrição do Card 1.</p>
-                            <a href="#" class="button">Saber Mais</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="img/data-8595837_1280.jpg" alt="Imagem 1">
-                        <div class="card-info">
-                            <h3>Teste</h3>
-                            <p>Descrição do Card 1.</p>
-                            <a href="#" class="button">Saber Mais</a>
-                        </div>
-                    </div>
-                    <!-- Repita o bloco abaixo para cada imagem -->
-                    <!-- <div class="card">
-                        <img src="imagem2.jpg" alt="Imagem 2">
-                        <div class="card-info">
-                            <h3>Título do Card 2</h3>
-                            <p>Descrição do Card 2.</p>
-                            <button>Saber Mais</button>
-                        </div>
-                    </div> -->
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Minha Empresa. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/55SEUNUMERO" target="_blank" class="whatsapp-btn">
-        <img src="img/icons8.png" alt="Ícone do WhatsApp">
-    </a>
-    
+    <script>
+        setTimeout(function() {
+            window.location.href = "principal.html";
+        }, 4000); // Redireciona após 3 segundos (3000 milissegundos)
+    </script>
 </body>
-
 </html>
